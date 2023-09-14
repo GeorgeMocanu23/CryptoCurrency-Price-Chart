@@ -1,30 +1,39 @@
+import React from 'react';
+import { FormControl, InputLabel, Select, MenuItem } from '@mui/material';
+
 function CurrencySelect({ selectedCurrency, handleCurrencyChange }) {
-    return (
-        <div>
-            <label htmlFor="currency">Select a currency: </label>
-            <select id="currency" name="currency" value={selectedCurrency} onChange={handleCurrencyChange}>
-                <option value="">Please choose the currency</option>
-                <option value="auroracoin">Aurora Coin</option>
-                <option value="binancecoin">Binance Coin (BNB)</option>
-                <option value="bitcoin">Bitcoin</option>
-                <option value="bitcoin-cash">Bitcoin Cash</option>
-                <option value="chainlink">Chainlink</option>
-                <option value="dash">Dash</option>
-                <option value="dogecoin">Dogecoin</option>
-                <option value="ethereum">Ethereum</option>
-                <option value="litecoin">Litecoin</option>
-                <option value="monero">Monero</option>
-                <option value="polkadot">Polkadot</option>
-                <option value="ripple">Ripple</option>
-                <option value="stellar">Stellar</option>
-                <option value="tether">Tether</option>
-                <option value="tezos">Tezos</option>
-                <option value="toncoin">Toncoin</option>
-                <option value="uniswap">Uniswap</option>
-                <option value="zcash">Zcash</option>
-            </select>
-        </div>
-    );
+  return (
+    <div>
+      <FormControl fullWidth>
+        <InputLabel htmlFor="currency">Select a currency:</InputLabel>
+        <Select
+          id="currency"
+          value={selectedCurrency}
+          onChange={handleCurrencyChange}
+          label="Select a currency"
+        >
+          <MenuItem value="auroracoin">Aurora Coin</MenuItem>
+          <MenuItem value="binancecoin">Binance Coin (BNB)</MenuItem>
+          <MenuItem value="bitcoin">Bitcoin</MenuItem>
+          <MenuItem value="bitcoin-cash">Bitcoin Cash</MenuItem>
+          <MenuItem value="chainlink">Chainlink</MenuItem>
+          <MenuItem value="dash">Dash</MenuItem>
+          <MenuItem value="dogecoin">Dogecoin</MenuItem>
+          <MenuItem value="ethereum">Ethereum</MenuItem>
+          <MenuItem value="litecoin">Litecoin</MenuItem>
+          <MenuItem value="monero">Monero</MenuItem>
+          <MenuItem value="polkadot">Polkadot</MenuItem>
+          <MenuItem value="ripple">Ripple</MenuItem>
+          <MenuItem value="stellar">Stellar</MenuItem>
+          <MenuItem value="tether">Tether</MenuItem>
+          <MenuItem value="tezos">Tezos</MenuItem>
+          <MenuItem value="toncoin">Toncoin</MenuItem>
+          <MenuItem value="uniswap">Uniswap</MenuItem>
+          <MenuItem value="zcash">Zcash</MenuItem>
+        </Select>
+      </FormControl>
+    </div>
+  );
 }
 
 export default CurrencySelect;
